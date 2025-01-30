@@ -1,0 +1,61 @@
+group 'co.com.holafly'
+version '1.0'
+description = 'Automation Challenge Holafly'
+
+defaultTasks 'clean', 'test', 'aggregate'
+
+buildscript {
+    ext {
+        serenityVersion = '4.2.11'
+        lombokVersion = '1.18.30'
+        junitVersion = '5.9.2'
+    }
+    repositories {
+        mavenCentral()
+        maven { url "https://plugins.gradle.org/m2/" }
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:4.2.11")
+    }
+}
+
+repositories {
+    mavenCentral()
+    maven { url "https://plugins.gradle.org/m2/" }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-webdriver:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay-rest:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-reports:$serenityVersion"
+    implementation "net.serenity-bdd:serenity-rest-assured:$serenityVersion"
+    implementation "io.appium:java-client:9.3.0"
+    implementation "com.github.javafaker:javafaker:1.0.2"
+    implementation "org.slf4j:slf4j-simple:2.0.5"
+    implementation group: 'com.google.googlejavaformat', name: 'google-java-format', version: '1.25.2'
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$junitVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$junitVersion"
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+tasks.withType(Test) {
+    systemProperties = System.properties
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
+
+gradle.startParameter.continueOnFailure = true
+test.finalizedBy(aggregate)
