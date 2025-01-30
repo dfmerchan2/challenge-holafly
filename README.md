@@ -26,7 +26,7 @@
 * Tener instalado y configurado [GRADLE](https://gradle.org/releases/).
 * Tener instalado [Appium](https://github.com/appium/appium-desktop/releases) en el sistema. 
 * Clona el proyecto desde la rama principal **`main`** utilizando el siguiente comando:
-    * `git clone https://github.com/dfmerchan2/challenge-yape.git`
+    * `git clone https://github.com/dfmerchan2/challenge-holaflyt`
 ---
 ## Compilar y ejecutar
 * ### Ejecución Mobile
