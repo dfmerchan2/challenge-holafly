@@ -1,7 +1,5 @@
 # CHALLENGE AUTOMATIZACIÓN HOLAFLY
 
----
-
 ## Technologies and Frameworks:
 * **Test Automation Framework:** Serenity BDD - Selenium
 * **Mobile Automation:** Appium
@@ -12,8 +10,6 @@
 * **Programming Language:** Java 21
 * **Dependency Management:** Gradle
 
----
-
 ## Pre-Conditions:
 * **[Java Development Kit (JDK)](https://www.oracle.com/co/java/technologies/javase/javase8-archive-downloads.html):** Java JDK version 21 or higher must be installed and configured on your system. 
 * **[Gradle](https://gradle.org/releases/):** Gradle must be installed and configured for project management and dependency resolution.
@@ -23,7 +19,7 @@
   * [Real Device](https://docs.katalon.com/katalon-studio/manage-projects/set-up-projects/mobile-testing/android/mobile-set-up-android-real-devices): Your Android device must be configured for testing and connected to your development machine.
 * **Project Setup:** Clone the project from the **`main`** branch using the following command:
     * `git clone https://github.com/dfmerchan2/challenge-holaflyt`
----
+
 ## Compilation and execution
 
 ### Local execution 
@@ -40,7 +36,6 @@ gradle test --tests *LoginRunner* =>                                        (Eje
 gradle test aggregate                                                       (Ejecuta toda la suite de pruebas en el proyecto y genera un informe de Serenity.)
 gradle clean test --tests "co.com.holafly.runners.*" aggregate -i           (Ejecutar un paquete de Runners, limpia el proyecto, y genera un informe de Serenity, mostrando información detallada)
 ```
----
 
 ## Video showing the script in execution:
 * Click the image or the [link](https://www.youtube.com/watch?v=zsdYoTZebjw) to view the execution video.
