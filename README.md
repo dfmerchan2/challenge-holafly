@@ -44,10 +44,9 @@ gradle clean test --tests "co.com.holafly.runners.*" aggregate -i           (Eje
 ## Reporte Serenity
 * Una vez completada la ejecución de las pruebas, dirígete a la ruta **"target/site/serenity"** y abre el archivo **index.html** en tu navegador para visualizar el informe generado por Serenity.
 
-
 ---
-
-
+## Evidencia de ejecucion
+[![Watch the video](https://img.youtube.com/vi/zsdYoTZebjw/maxresdefault.jpg)](https://www.youtube.com/watch?v=zsdYoTZebjw)
 
 ## Autor 🤖
 
