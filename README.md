@@ -1,4 +1,4 @@
-# CHALLENGE AUTOMATIZACIÓN HOLAFLY
+# AUTOMATION CHALLENGE HOLAFLY
 
 ## Technologies and Frameworks:
 * **Test Automation Framework:** Serenity BDD - Selenium
